@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 button {
@@ -43,11 +44,18 @@ button {
         z-index: 2;
         small {
             font-size: 20px;
+            @include respond(mobile) {
+                font-size: 15px;
+            }
         }
         h1 {
             font-size: 80px;
             margin: 10px 0 30px;
             line-height: 80px;
+            @include respond(mobile) {
+                font-size: 36px;
+                line-height: 50px;
+            }
         }
     }
     .side-bar {
@@ -57,11 +65,25 @@ button {
         position: absolute;
         right: 0;
         top: 0%;
+        @include respond(mobile) {
+            width: 100%;
+            height: 50px;
+            top: auto;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
         .menu {
             display: block;
             width: 25px;
             margin: 40px auto 0;
             cursor: pointer;
+            @include respond(mobile) {
+                width: 18px;
+                margin: 0;
+            }
         }
         .social-links {
             width: 50px;
@@ -69,12 +91,21 @@ button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            @include respond(mobile) {
+                width: auto;
+                position: unset;
+                transform: none;
+            }
         }
         .useful-links {
             width: 50px;
             text-align: center;
             position: absolute;
             bottom: 30px;
+            @include respond(mobile) {
+                width: auto;
+                position: unset;
+            }
         }
         .social-links img,
         .useful-links img {
