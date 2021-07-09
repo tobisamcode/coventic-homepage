@@ -39,7 +39,7 @@ button {
         }
     }
     .showMenu {
-        transform: translateY(0);
+        transform: translateY(0) !important;
     }
     .nav {
         // display: none;

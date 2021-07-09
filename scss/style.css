@@ -47,9 +47,12 @@ button {
   width: 100px;
   cursor: pointer;
 }
+.hero .showMenu {
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+}
 .hero .nav {
-  display: none;
-  position: absolute;
+  position: fixed;
   right: 50px;
   top: 0;
   width: 245px;
@@ -57,6 +60,12 @@ button {
   z-index: 100;
   background: -webkit-gradient(linear, left top, left bottom, from(#00545d), to(#000729));
   background: linear-gradient(#00545d, #000729);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 @media (max-width: 600px) {
   .hero .nav {
