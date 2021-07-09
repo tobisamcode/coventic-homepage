@@ -43,7 +43,7 @@ button {
     }
     .nav {
         // display: none;
-        position: fixed;
+        position: absolute;
         right: 50px;
         top: 0;
         width: 245px;
@@ -67,6 +67,7 @@ button {
                 line-height: 22px;
                 text-align: inherit;
                 padding: 9px 0px;
+                cursor: pointer;
                 a {
                     color: $white-color;
                     width: 20px;
