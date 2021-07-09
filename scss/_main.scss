@@ -3,6 +3,8 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 button {
@@ -11,6 +13,7 @@ button {
     background: transparent;
     border: 1px solid #fff;
     border-radius: 20px;
+    z-index: 2000;
     outline: none;
     cursor: pointer;
 }
@@ -35,6 +38,37 @@ button {
             cursor: pointer;
         }
     }
+    .nav {
+        display: none;
+        position: absolute;
+        right: 50px;
+        top: 0;
+        width: 245px;
+        padding: 20px;
+        z-index: 100;
+        background: linear-gradient(#00545d, #000729);
+        @include respond(mobile) {
+            padding: 0;
+            right: 0;
+            width: 200px;
+        }
+        .nav-links {
+            padding: 95px 55px;
+            height: 100vh;
+            li {
+                margin-bottom: 20px;
+                line-height: 10px;
+                font-size: 25px;
+                line-height: 22px;
+                text-align: inherit;
+                padding: 9px 0px;
+                a {
+                    color: $white-color;
+                    width: 20px;
+                }
+            }
+        }
+    }
     .content {
         color: $white-color;
         position: absolute;
@@ -56,6 +90,10 @@ button {
                 font-size: 36px;
                 line-height: 50px;
             }
+            @include respond(tablet) {
+                font-size: 50px;
+                line-height: 50px;
+            }
         }
     }
     .side-bar {
@@ -65,6 +103,7 @@ button {
         position: absolute;
         right: 0;
         top: 0%;
+        z-index: 200;
         @include respond(mobile) {
             width: 100%;
             height: 50px;
