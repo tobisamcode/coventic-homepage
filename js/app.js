@@ -1,3 +1,3 @@
 const menu = document.querySelector('menu');
 
-const
+const NavMenu = document.querySelector('nav');
