@@ -38,9 +38,12 @@ button {
             cursor: pointer;
         }
     }
+    .showMenu {
+        transform: translateY(0);
+    }
     .nav {
-        display: none;
-        position: absolute;
+        // display: none;
+        position: fixed;
         right: 50px;
         top: 0;
         width: 245px;
